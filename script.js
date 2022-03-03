@@ -1,4 +1,54 @@
 // Variable initialization
+const allButtons = document.querySelector(".buttonPad");
+const userInput = document.querySelector("#user-input");
+const calculator = document.querySelector(".calculator");
+const displayResult = document.querySelector("#resuult")
+let mathEquation = 0;
+
+
+// Create response to clicking
+allButtons.addEventListener("click", (event) => {
+
+    // Terminate if user clicks non-button
+    if(!event.target.closest('button')) return;
+
+    const key = event.target;
+    const keyValue = key.textContent
+    let equationDisplay = userInput.textContent;
+
+})
+
+
+
+// Create function to calculate from operator result
+function operate (firstInput, operator, secondInput) {
+    firstInput = Number(firstInput);
+    secondInput = Number(secondInput);
+
+    if (operator === '+') return firstInput + secondInput;
+    if (operator === '-') return firstInput - secondInput;
+    if (operator === 'X') return firstInput * secondInput;
+    if (operator === '/') return firstInput / secondInput;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Input variables when user clicks buttons (0 - 9)
 let firstInput = 0;
@@ -76,94 +126,3 @@ buttonNine.addEventListener("click", function (firstInput) {
     firstInput = 9;
     firstValueInput(firstInput);
 });
-
-// Math operator functions
-
-// Addition
-function add(firstInput, secondInput) {
-    return(firstInput + secondInput);
-}
-
-// Subtraction
-function subtract(firstInput, secondInput) {
-    return(firstInput - secondInput);
-}
-
-// Multiplication
-function multiply(firstInput, secondInput) {
-    return(firstInput * secondInput);
-}
-
-// Division
-function divide(firstInput, secondInput) {
-    if (secondInput !== 0) {
-        return(firstInput / secondInput);
-    } else {
-        return "Can't divide by 0!";
-    }
-}
-
-
-// Create functions to store math operator when clicked
-addButton = document.querySelector("#addButton");
-subtractButton = document.querySelector("#subtractButton");
-multiplyButton = document.querySelector("#multiplyButton");
-divideButton = document.querySelector("#divideButton");
-
-
-addButton.addEventListener("click", function () {
-    operation = add();
-    operationInput(firstInput);
-});
-
-subtractButton.addEventListener("click", function () {
-    operation = subtract();
-    operationInput(firstInput);
-});
-
-multiplyButton.addEventListener("click", function () {
-    operation = multiply();
-    operationInput(firstInput);
-});
-
-divideButton.addEventListener("click", function () {
-    operation = divide();
-    operationInput(firstInput);
-});
-
-
-
-// Operate function [Takes in 2 numbers to use in a math operator function]
-function operate(firstInput, secondInput) {
-    operation;
-    // Probably need if / else if's to call math operator used by user
-}
-
-operate(firstInput, secondInput);
-
-
-
-
-
-
-// Creation of functions that populate display with Result and Operations done from user input
-// Want to store firstInput in result until operation pressed
-let firstValueInput = function (firstInput) {
-    outputNumber.innerHTML = `${firstInput}`
-}
-// Then, store firstInput and operation in top paragraph showing operations
-let operationInput = function (firstInput) {
-    // Add if statements to call right math operator
-    // Addition for example
-    inputParameters.innerHTML = `${firstInput}`
-}
-// Then, store secondInput in result until equals pressed
-let secondValueInput = function (secondInput) {
-    outputNumber.innerHTML = `${secondInput}`
-}
-// When equals pressed, show full operation in top including equals and result in the result section
-let finalOperationInput = function (firstInput, secondInput) {
-    inputParameters.innerHTML = `${firstInput} + ${secondInput} =`
-    outputNumber.innerHTML = add(firstInput, secondInput);
-}
-finalOperationInput(firstInput, secondInput);
