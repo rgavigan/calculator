@@ -54,7 +54,23 @@ button {
 }
 
 button:hover {
-    background-color: #fff;
+    background-color: #ddd;
+}
+
+.operatorButton {
+    background-color: #bbb;
+}
+
+.operatorButton:hover {
+    background-color: #aaa;
+}
+
+.equalsButton {
+    background-color: #FFC0CB;
+}
+
+.equalsButton:hover {
+    background-color: #FFB6C1;
 }
 
 /* Enlarge the backspace button */
