@@ -1,8 +1,10 @@
+/* Global properties */
 * {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
+/*Calculator properties */
 .calculator {
     max-width: 415px;
     height: 550px;
@@ -13,6 +15,7 @@
     margin-top: 100px;
 }
 
+/*Display screen properties */
 .screen {
     display: block;
     background-color: #eee;
@@ -25,6 +28,7 @@
     border-radius: 8px;
 }
 
+/*Display screen number properties */
 .screenNumbers {
     display: flex;
     flex-direction: column;
@@ -32,10 +36,7 @@
     margin-right: 10px;
 }
 
-#outputNumber {
-    font-size: 18px;
-}
-
+/*Button pad properties*/
 .buttonPad {
     display: flex;
     margin: auto;
@@ -53,10 +54,12 @@ button {
     border-radius: 8px;
 }
 
+/*Button hover properties*/
 button:hover {
     background-color: #ddd;
 }
 
+/*Setting operator button properties*/
 .operatorButton {
     background-color: #bbb;
 }
@@ -65,6 +68,7 @@ button:hover {
     background-color: #aaa;
 }
 
+/*Setting equals button properties*/
 .equalsButton {
     background-color: #FFC0CB;
 }
@@ -83,6 +87,7 @@ button:hover {
     pointer-events: none;
   }
 
+/*Footer properties*/
 footer {
     text-align: center;
     margin-top: 15px;
